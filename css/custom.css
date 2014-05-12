@@ -1,0 +1,97 @@
+/*------------------------------------------------------------------
+
+[Custom Stylesheet]
+
+
+Last change:	07/16/2013
+Assigned to:	You
+
+-------------------------------------------------------------------*/
+
+/* Force an element to have no margin */
+.no-margin {
+	margin: 0 !important;	
+}
+
+/* Fixed button focus bug */
+.btn:focus {
+    background-position: 0 0;
+	color: #333333;
+}
+
+.btn-primary:focus, .btn-secondary:focus, .btn-tertiary:focus {
+	color: #FFF;
+}
+
+.resource_row {
+	margin-bottom: 10px;
+}
+
+.checklist_row {
+	margin-bottom: 10px;
+}
+
+/* Resource Picker */
+.resource_current_image {
+	margin-bottom: 20px;	
+}
+.resource {
+	border: 1px solid;
+	float: left;
+	margin: 10px;
+	padding: 10px;
+	position: relative;
+	text-align: center;
+	width: 100px;
+	word-break: break-all;
+}
+
+.resource:nth-child(3n+1){
+	clear: both;
+}
+
+.resource_image_wrapper {
+	height: 50px;
+	margin: auto auto 5px;
+	width: 50px;
+	padding-bottom: 10px;
+
+}
+
+.resource_image_wrapper img{
+	width: 50px;
+}
+
+.clrb {
+	clear: both;	
+}
+
+/* /Resource Picker */
+
+.or_divider {
+	background-color: #F5F5F5;
+    border-bottom: 1px solid #DDDDDD;
+    border-top: 1px solid #DDDDDD;
+    display: block;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 55px;
+    margin-bottom: 0.65em;
+    text-align: center;
+}
+
+#page-list-admin ul{
+	list-style: none;
+	padding-left: 20px;
+}
+
+#page-list-admin > ul{
+	list-style: none;
+	padding: 0;
+	margin-bottom: 5px;
+}
+
+#page-list-admin > ul > li{
+	border-bottom: 1px solid #ddd;
+	padding: 10px 0;
+}

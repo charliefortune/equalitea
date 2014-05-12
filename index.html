@@ -1,0 +1,134 @@
+<html>
+    <head>
+        <script src="css/source-sans-pro.js"></script>
+        <link href="css/styles.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <!---------- Banner view --------->
+
+        <script id="header-banner-tpl" type="text/x-handlebars-template">
+            <div class="header-banner">
+            <img src="/img/logo.jpg" height="200px"/>
+            </div>
+        </script>
+
+        <!---------- Home view --------->
+
+        <script id="home-tpl" type="text/x-handlebars-template">
+<div class='header'>
+    <h1>EqualiTea</h1>
+</div>
+<div class="text-center">
+    <a href="#contact" class="btn-primary btn btn-lg wide-btn">My contacts</a>
+</div>
+<div class="text-center">
+    <a href="#round" class="btn-primary btn btn-lg wide-btn">My rounds</a>
+</div>
+
+        </script>
+
+        <!---------- Login view --------->
+
+       <script id="login-tpl" type="text/x-handlebars-template">
+            <div class='header'>
+            <h1>EqualiTea</h1>
+            </div>
+            <div class="text-center">
+            <form>
+                <input type='text' 
+                       name='username'
+                       class='form-control'
+                       placeholder='username'/>
+                <input type='password' 
+                       name='password'
+                       class='form-control'
+                       placeholder='password'/>
+                <input type='submit' 
+                       class='btn btn-success wide-btn' 
+                       value='login' />
+            </form>
+           
+
+        </script>
+
+        <!---------- Contactlist view --------->
+
+        <script id="contact-li-tpl" type="text/x-handlebars-template">
+            {{#.}}
+            <li>
+            <a href="#contact/{{this.id}}">
+            {{this.displayName}} <br/>
+            </a>
+            </li>
+            {{/.}}
+        </script>
+
+        <!---------- Contact view --------->
+
+        <script id="contact-tpl" type="text/x-handlebars-template">
+            <div class='header'>
+            <a href='#' class="button header-button header-button-left">Back</a>
+            <h1>Details</h1>
+            </div>
+            <div class='details'>
+            <img class='contact-image' src='img/{{displayName}}.jpg' />
+
+            <h1>{{displayName}}</h1>
+            <h2>{{title}}</h2>
+            <span class="address">
+            </span>
+            <label for='dob'>D.O.B.</label>
+            <input type='text' id='dob' value='{{dateOfBirth}}' />
+            <input type='radio' name='gender' value='m' />Male
+            <input type='radio' name='gender' value='f' />Female
+
+
+            <a href='#send' class="button send-msg">Send Message</a>
+        </script>
+
+
+        <!---------- Roundlist view --------->
+
+        <script id="round-li-tpl" type="text/x-handlebars-template">
+            {{#.}}
+            <li>
+            <a href="#round/{{this.id}}">
+            {{this.title}} <br/>
+            </a>
+            </li>
+            {{/.}}
+        </script>
+
+        <!---------- Round view --------->
+
+        <script id="round-tpl" type="text/x-handlebars-template">
+            <div class='header'>
+            <a href='#' class="button header-button header-button-left">Back</a>
+            <h1>{{title}}</h1>
+            </div>
+            <div class='details'>
+            <img class='contact-image' src='img/{{title}}.jpg' />
+
+            <h1>{{displayName}}</h1>
+            <h2>{{title}}</h2>
+            <span class="description">
+            {{description}}
+            </span>
+
+            <a href='#send' class="button send-msg">Send Message</a>
+        </script>
+
+        <script src="phonegap.js"></script>
+        <script src="lib/handlebars.js"></script>
+        <script src="lib/jquery-1.8.2.min.js"></script>
+        <script src="js/storage/memory-store.js"></script>
+        <!--        <script src="js/storage/contact-store.js"></script>-->
+        <script src="js/HomeView.js"></script>
+        <script src="js/LoginView.js"></script>
+        <script src="js/ContactView.js"></script>
+        <script src="js/RoundView.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
